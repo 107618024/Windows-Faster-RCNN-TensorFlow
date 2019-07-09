@@ -1,4 +1,4 @@
-FT faster RCNN
+Windows-Faster-RCNN-TensorFlow
 ==========
 謝謝這些項目的啟發，我只是完成在windows上做執行     	
 
