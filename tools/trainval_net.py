@@ -29,10 +29,10 @@ def parse_args():
   parser = argparse.ArgumentParser(description='Train a Fast R-CNN network')
   parser.add_argument('--cfg', dest='cfg_file',
                       help='optional config file',
-                      default=r"C:\Users\gary\Desktop\tf-faster-rcnn-master\tf-faster-rcnn-master\experiments\cfgs\res50.yml", type=str)
+                      default="../experiments/cfgs/res50.yml", type=str)
   parser.add_argument('--weight', dest='weight',
                       help='initialize with pretrained model weights',
-                      type=str,default=r"C:\Users\gary\Desktop\tf-faster-rcnn-master\tf-faster-rcnn-master\data\imagenet_weights\res50.ckpt")
+                      type=str,default="../data/imagenet_weights/res50.ckpt")
   parser.add_argument('--imdb', dest='imdb_name',
                       help='dataset to train on',
                       default='voc_2007_trainval', type=str)
