@@ -26,7 +26,7 @@ def parse_args():
   """
   parser = argparse.ArgumentParser(description='Test a Fast R-CNN network')
   parser.add_argument('--cfg', dest='cfg_file',
-            help='optional config file', default=None, type=str)
+            help='optional config file', default="C:\Users\gary\Desktop\tf-faster-rcnn-master\tf-faster-rcnn-master\experiments\cfgs\res50.yml", type=str)
   parser.add_argument('--model', dest='model',
             help='model to test',
             default=None, type=str)
@@ -39,7 +39,7 @@ def parse_args():
             help='max number of detections per image',
             default=100, type=int)
   parser.add_argument('--tag', dest='tag',
-                        help='tag of the model',
+                        help='test',
                         default='', type=str)
   parser.add_argument('--net', dest='net',
                       help='vgg16, res50, res101, res152, mobile',

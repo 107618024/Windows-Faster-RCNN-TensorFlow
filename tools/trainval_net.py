@@ -29,10 +29,10 @@ def parse_args():
   parser = argparse.ArgumentParser(description='Train a Fast R-CNN network')
   parser.add_argument('--cfg', dest='cfg_file',
                       help='optional config file',
-                      default=None, type=str)
+                      default=r"C:\Users\gary\Desktop\tf-faster-rcnn-master\tf-faster-rcnn-master\experiments\cfgs\res50.yml", type=str)
   parser.add_argument('--weight', dest='weight',
                       help='initialize with pretrained model weights',
-                      type=str)
+                      type=str,default=r"C:\Users\gary\Desktop\tf-faster-rcnn-master\tf-faster-rcnn-master\data\imagenet_weights\res50.ckpt")
   parser.add_argument('--imdb', dest='imdb_name',
                       help='dataset to train on',
                       default='voc_2007_trainval', type=str)
@@ -43,8 +43,8 @@ def parse_args():
                       help='number of iterations to train',
                       default=70000, type=int)
   parser.add_argument('--tag', dest='tag',
-                      help='tag of the model',
-                      default=None, type=str)
+                      help='tag of the model',  
+                      default="Train", type=str)
   parser.add_argument('--net', dest='net',
                       help='vgg16, res50, res101, res152, mobile',
                       default='res50', type=str)
@@ -52,9 +52,9 @@ def parse_args():
                       help='set config keys', default=None,
                       nargs=argparse.REMAINDER)
 
-  if len(sys.argv) == 1:
-    parser.print_help()
-    sys.exit(1)
+#  if len(sys.argv) == 1:
+#    parser.print_help()
+#    sys.exit(1)
 
   args = parser.parse_args()
   return args

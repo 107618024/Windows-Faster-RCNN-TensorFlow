@@ -364,8 +364,8 @@ def train_net(network, imdb, roidb, valroidb, output_dir, tb_dir,
               pretrained_model=None,
               max_iters=40000):
   """Train a Faster R-CNN network."""
-  roidb = filter_roidb(roidb)
-  valroidb = filter_roidb(valroidb)
+#  roidb = filter_roidb(roidb)
+#  valroidb = filter_roidb(valroidb)
 
   tfconfig = tf.ConfigProto(allow_soft_placement=True)
   tfconfig.gpu_options.allow_growth = True
