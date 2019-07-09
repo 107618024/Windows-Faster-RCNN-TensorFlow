@@ -29,7 +29,7 @@ def parse_args():
             help='optional config file', default="../experiments/cfgs/res50.yml", type=str)
   parser.add_argument('--model', dest='model',
             help='model to test',
-            default=None, type=str)
+            default="../output/res50/voc_2007_trainval/Train/res50_faster_rcnn_iter_100.ckpt", type=str)
   parser.add_argument('--imdb', dest='imdb_name',
             help='dataset to test',
             default='voc_2007_test', type=str)
@@ -48,9 +48,9 @@ def parse_args():
                         help='set config keys', default=None,
                         nargs=argparse.REMAINDER)
 
-  if len(sys.argv) == 1:
-    parser.print_help()
-    sys.exit(1)
+#  if len(sys.argv) == 1:
+#    parser.print_help()
+#    sys.exit(1)
 
   args = parser.parse_args()
   return args
